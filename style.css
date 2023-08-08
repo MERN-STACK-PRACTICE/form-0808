@@ -1,0 +1,41 @@
+.formbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+form{
+    padding: 80px;
+    border: 10px black;
+    box-shadow: 10px 10px 10px;
+    background-color: rgb(232, 217, 199);
+}
+.form-input{
+    margin: 20px;
+}
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+h1{
+    text-align: center;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.btn{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    height: 20px;
+    width: 60px;
+}
