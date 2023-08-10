@@ -3,32 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Document</title>
+    <title>Account Creation</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header>
+        <nav>
+          <div class="nav-bar">
+            <ul class="nav-main">
+              <li><a class="nav-opt" href="/">Home</a></li>
+              <li><a class="nav-opt" href="/">About Us</a></li>
+              <li><a class="nav-opt" href="/">Branches</a></li>
+              <li><a class="nav-opt" href="/">Net Banking</a></li>
+              <li><a class="nav-opt" href="/">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
     <div class="formbox">
         <form>
-            <h1>Student Login</h1>
-            <div class="form-input">
-                <label for="email">Email</label>
-                <input type="email" placeholder="Enter Email Id" name="email" id="email" required />
+            <div class="logo-container">
+            <img src="logo.png" alt="logo" class="logo">
             </div>
+            <h1>Bank Details</h1>
+
             <div class="form-input">
-                <label for="mobileno">Mobile No.</label>
+                <label for="title">Title<span style="color: red;" required>*</span></label>
+                
+                <select id="title" name="title" style="width:300px; height:30px">
+                    <option>Mr.</option>
+                    <option>Miss</option>
+                    <option>Mrs.</option>
+                </select>
+            </div>
+
+            <div class="form-input">
+                <label for="name">Name<span style="color: red;" required>*</span></label>
+                <input type="text" for="name" placeholder="Enter your name" />
+            </div>
+
+            <div class="form-input">
+                <label for="email">Email<span style="color: red;" required>*</span></label>
+                <input type="email" placeholder="Enter Email Id" name="email" id="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required />
+            </div>
+
+            <div class="form-input">
+                <label for="mobileno">Mobile No.<span style="color: red;" required>*</span></label>
                 <input type="text" placeholder="Enter Mobile No." name="mobileno" id="mobileno" required />
             </div>
+           
             <div class="form-input">
-                <label for="password">Password</label>
-                <input type="password" placeholder="Enter Password" name="password" id="password" required />
+                <label for="address">Address:<span style="color: red;" required>*</span></label>
+                <input type="text"  placeholder="Enter your address" name="address" id="address" required />
             </div>
- 
+<div class="form-input">
+    <label for="dob">
+        Date of Birth<span style="color: red;" required>*</span>
+    </label>
+    <input type="date" name="dob" id="dob">
+</div>
+            <div class="form-input">
+                <label>
+                    Gender
+                </label>
+               
+                    <input type="radio" name="gender" id="male" value="male" required>Male</input>
+                    <input type="radio" name="gender" id="female" value="female">Female</input>
+            </div>
+            
+            <div class="form-input">
+                <label for="password">Password<span style="color: red;" required>*</span></label>
+                <input type="password" placeholder="Enter Password" name="password" id="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"  required />
+            </div>
+            <div class="form-input">
+                <label for="account-type">Account Type<span style="color: red;" required>*</span></label>
+                <select name="account-type" id="account-type" style="width:300px; height:30px" >
+                    <option>Current Account</option>
+                    <option>Savings Account</option>
+                    <option>Bussiness Account
+                    </option>
+                </select>
+
+            </div>
             <div>
                 <button class="btn btn--primary">Submit</button>
             </div>
         </form>
+        
     </div>
+    <footer>
+        <div class="footer">
+            <p>&copy; 2023- HDFC Bank-All rights Reserved</p>
+        </div>
+    </footer>
     
 </body>
 </html>
